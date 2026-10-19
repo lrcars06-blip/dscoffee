@@ -1,0 +1,1030 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DS Coffee-n-Cake — Coffee shop américain à Châlons-en-Champagne</title>
+<meta name="description" content="DS Coffee-n-Cake, coffee shop américain au 15 rue Thiers à Châlons-en-Champagne : cafés de spécialité, carrot cake, cheesecake, pumpkin et lemon cake faits maison. Sur place ou à emporter.">
+<meta property="og:title" content="DS Coffee-n-Cake — Châlons-en-Champagne">
+<meta property="og:description" content="Cafés de spécialité et cakes américains faits maison, 15 rue Thiers.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<meta name="theme-color" content="#17110d">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Yellowtail&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"CafeOrCoffeeShop","name":"DS Coffee-n-Cake","telephone":"+33326645628","priceRange":"€","servesCuisine":"Coffee shop américain, pâtisserie","address":{"@type":"PostalAddress","streetAddress":"15 rue Thiers","postalCode":"51000","addressLocality":"Châlons-en-Champagne","addressCountry":"FR"},"sameAs":["https://www.instagram.com/dscoffeencake/","https://www.facebook.com/dscoffeencake/"],"aggregateRating":{"@type":"AggregateRating","ratingValue":"4.9","reviewCount":"278"}}
+</script>
+<style>
+:root{
+  --ink:#17110d; --ink2:#211813; --ink3:#2c211a;
+  --cream:#f5ebdc; --cream2:#e9dcc6; --muted:#ad9c88;
+  --red:#d23a2f; --orange:#ec8a45; --lemon:#f3d45f; --mint:#a9dccb;
+  --line:rgba(245,235,220,.12);
+  --display:"Anton",Impact,"Arial Narrow",sans-serif;
+  --hand:"Yellowtail","Brush Script MT",cursive;
+  --body:"DM Sans",system-ui,-apple-system,sans-serif;
+  --ease:cubic-bezier(.16,1,.3,1);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--ink);color:var(--cream);font-family:var(--body);font-size:17px;line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:9999;opacity:.045;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+img,svg{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+::selection{background:var(--orange);color:var(--ink)}
+.wrap{width:min(1180px,100% - 40px);margin-inline:auto}
+.display{font-family:var(--display);font-weight:400;text-transform:uppercase;line-height:.9;letter-spacing:.005em}
+.hand{font-family:var(--hand);font-weight:400}
+.kicker{font-family:var(--hand);font-size:clamp(26px,2.6vw,36px);color:var(--orange);display:inline-block;transform:rotate(-3deg);margin-bottom:8px}
+
+/* ---------- ticker ---------- */
+.ticker{background:var(--red);color:var(--cream);font-size:11.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;overflow:hidden;white-space:nowrap;height:32px;display:flex;align-items:center;position:relative;z-index:70}
+.ticker div{display:inline-flex;animation:tick 38s linear infinite}
+.ticker span{display:inline-flex;align-items:center;gap:26px;padding-right:26px}
+.ticker span::after{content:"✳";font-size:12px;opacity:.75}
+@keyframes tick{to{transform:translateX(-50%)}}
+
+/* ---------- nav (pill flottante) ---------- */
+#nav{position:sticky;top:0;z-index:60;padding:12px 0;pointer-events:none}
+.bar{pointer-events:auto;width:min(1180px,100% - 24px);margin:0 auto;height:60px;border-radius:999px;background:rgba(23,17,13,.55);backdrop-filter:blur(18px) saturate(1.4);-webkit-backdrop-filter:blur(18px) saturate(1.4);border:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;gap:16px;padding:0 8px 0 16px;position:relative;transition:background .4s}
+#nav.solid .bar{background:rgba(23,17,13,.82)}
+.logo{display:flex;align-items:center;gap:8px;line-height:1}
+.logo b{font-family:var(--display);font-weight:400;font-size:24px;background:var(--cream);color:var(--ink);padding:5px 7px 3px;border-radius:7px;transform:rotate(-5deg);display:inline-block;transition:transform .5s var(--ease)}
+.logo:hover b{transform:rotate(4deg) scale(1.06)}
+.logo i{font-family:var(--hand);font-style:normal;font-size:24px}
+.bar ul{display:flex;gap:28px;list-style:none;font-size:12.5px;font-weight:500;letter-spacing:.12em;text-transform:uppercase}
+.bar ul a{position:relative;padding:6px 0;opacity:.8;transition:opacity .3s}
+.bar ul a:hover{opacity:1}
+.bar ul a::after{content:"";position:absolute;left:0;bottom:0;height:2px;width:100%;background:var(--orange);border-radius:2px;transform:scaleX(0);transform-origin:right;transition:transform .45s var(--ease)}
+.bar ul a:hover::after{transform:scaleX(1);transform-origin:left}
+.burger{display:none;width:44px;height:44px;position:relative}
+.burger::before,.burger::after{content:"";position:absolute;left:12px;right:12px;height:2px;border-radius:2px;background:var(--cream);transition:transform .4s var(--ease),top .4s var(--ease)}
+.burger::before{top:17px}.burger::after{top:25px}
+.burger.x::before{top:21px;transform:rotate(45deg)}.burger.x::after{top:21px;transform:rotate(-45deg)}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;gap:10px;background:var(--cream);color:var(--ink);font-weight:700;font-size:13px;letter-spacing:.08em;text-transform:uppercase;padding:15px 24px;border-radius:999px;border:1.5px solid var(--cream);white-space:nowrap;transition:transform .35s var(--ease),background .3s,color .3s,border-color .3s}
+.btn:hover{transform:translateY(-3px);background:var(--red);border-color:var(--red);color:var(--cream)}
+.btn.sm{padding:11px 18px;font-size:12px}
+.btn.ghost{background:transparent;color:var(--cream);border-color:rgba(245,235,220,.4)}
+.btn.ghost:hover{background:var(--cream);color:var(--ink);border-color:var(--cream)}
+.btn svg{width:15px;height:15px;transition:transform .4s var(--ease)}
+.btn:hover svg{transform:translateX(4px)}
+.row{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+
+@media(max-width:960px){
+  .bar ul{position:absolute;top:70px;left:0;right:0;flex-direction:column;gap:0;background:rgba(33,24,19,.97);border:1px solid var(--line);border-radius:26px;padding:10px 22px;opacity:0;visibility:hidden;transform:translateY(-10px);transition:opacity .35s,transform .45s var(--ease),visibility 0s .45s}
+  .bar ul.open{opacity:1;visibility:visible;transform:none;transition:opacity .35s,transform .45s var(--ease)}
+  .bar ul a{display:block;padding:15px 0;font-size:15px;border-bottom:1px solid var(--line);opacity:1}
+  .bar ul li:last-child a{border:0}
+  .bar ul a::after{display:none}
+  .burger{display:block}
+  .bar .btn{display:none}
+}
+
+/* ---------- pin ---------- */
+.pin{position:relative}
+.pin>.stage{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden}
+
+/* ---------- HERO ---------- */
+#hero{height:260vh;margin-top:-84px}
+#hero canvas{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+#beansBack{z-index:1}#beansFront{z-index:4}
+.glow{position:absolute;z-index:0;left:75%;top:54%;width:min(80vw,820px);aspect-ratio:1;translate:-50% -50%;border-radius:50%;background:radial-gradient(circle,rgba(236,138,69,.42),rgba(210,58,47,.12) 38%,rgba(236,138,69,0) 64%)}
+.heroText{position:absolute;z-index:5;top:0;bottom:0;left:max(20px,calc((100vw - 1180px)/2));width:min(620px,54vw);display:flex;flex-direction:column;justify-content:center;padding-top:84px}
+.eyebrow{display:flex;align-items:center;gap:12px;font-size:12px;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);margin-bottom:22px}
+.eyebrow::before{content:"";width:30px;height:1.5px;background:var(--orange)}
+.title{font-size:min(13vw,22vh,220px);line-height:.86}
+.title span{display:block;will-change:transform}
+.title .l2{color:transparent;-webkit-text-stroke:2px var(--cream)}
+.title .amp{display:inline-block;font-family:var(--hand);text-transform:none;font-size:.56em;color:var(--orange);-webkit-text-stroke:0;transform:rotate(-8deg) translateY(-.12em);margin-right:.06em;vertical-align:middle}
+.heroTag{margin-top:30px}
+.heroTag p{font-size:clamp(16px,1.35vw,18px);max-width:440px;color:var(--cream2);margin-bottom:24px}
+.heroCup{position:absolute;z-index:3;left:75%;top:54%;width:min(29vw,52vh,420px);translate:-50% -50%;filter:drop-shadow(0 50px 60px rgba(0,0,0,.6));will-change:transform}
+.hero2{position:absolute;inset:0;z-index:5;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:0 20px;opacity:0;pointer-events:none}
+.hero2 h2{font-size:clamp(46px,8.4vw,132px)}
+.hero2 h2 em{font-style:normal;color:var(--orange)}
+.hero2 .hand{font-size:clamp(28px,3.2vw,46px);color:var(--orange);transform:rotate(-4deg);margin-bottom:10px}
+.scrollHint{position:absolute;bottom:26px;right:max(20px,calc((100vw - 1180px)/2));z-index:6;font-size:10.5px;letter-spacing:.3em;text-transform:uppercase;color:var(--muted);display:flex;align-items:center;gap:12px}
+.scrollHint i{width:1.5px;height:38px;background:linear-gradient(var(--orange),transparent);animation:hint 2s var(--ease) infinite}
+@keyframes hint{0%{transform:scaleY(0);transform-origin:top}55%{transform:scaleY(1);transform-origin:top}56%{transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
+@media(max-width:900px){
+  .glow{left:50%;top:57%}
+  .heroText{left:20px;right:20px;width:auto;justify-content:flex-start;padding:104px 0 26px}
+  .eyebrow{font-size:10.5px;letter-spacing:.16em;margin-bottom:14px}
+  .title{font-size:min(22vw,13vh)}
+  .heroTag{margin-top:auto}
+  .heroTag p{font-size:15.5px;margin-bottom:18px;text-shadow:0 2px 14px rgba(0,0,0,.9)}
+  .heroCup{left:50%;top:57%;width:min(54vw,27vh)}
+  .scrollHint{display:none}
+}
+@media(max-width:900px) and (max-height:720px){.heroTag p{display:none}}
+
+/* ---------- POUR ---------- */
+#pour{height:280vh}
+#pour .stage{display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:4vw;padding:0 max(20px,calc((100vw - 1180px)/2))}
+.steps{position:relative;height:min(48vh,400px)}
+.step{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;opacity:0;transform:translateY(36px);transition:opacity .3s,transform .5s var(--ease)}
+.step.past{transform:translateY(-36px)}
+.step.on{opacity:1;transform:none;transition:opacity .6s .15s,transform .9s var(--ease) .15s}
+.step .n{font-family:var(--hand);font-size:30px;color:var(--orange);transform:rotate(-4deg);display:inline-block;margin-bottom:6px}
+.step h3{font-size:clamp(46px,6.2vw,100px);margin-bottom:20px}
+.step p{font-size:clamp(16px,1.4vw,19px);color:var(--muted);max-width:430px}
+.gauge{position:absolute;left:max(20px,calc((100vw - 1180px)/2));bottom:7vh;display:flex;gap:8px}
+.gauge i{width:48px;height:3px;border-radius:3px;background:var(--line);overflow:hidden;position:relative}
+.gauge i::after{content:"";position:absolute;inset:0;background:var(--orange);transform:scaleX(var(--f,0));transform-origin:left}
+.cupWrap{position:relative;height:100%;display:grid;place-items:center}
+#cup{width:min(100%,64vh,560px);overflow:visible}
+.steam path{fill:none;stroke:var(--cream);stroke-width:5;stroke-linecap:round;stroke-dasharray:12 22;opacity:.7;animation:steam 2.4s linear infinite}
+.steam path:nth-child(2){animation-duration:3s}.steam path:nth-child(3){animation-duration:2.7s}
+@keyframes steam{to{stroke-dashoffset:-68}}
+.sticker{position:absolute;right:4%;top:15vh;font-family:var(--hand);font-size:clamp(22px,2.2vw,32px);line-height:1.15;transform:rotate(6deg) scale(.9);opacity:0;transition:opacity .5s,transform .7s var(--ease);text-align:center}
+.sticker.on{opacity:1;transform:rotate(6deg)}
+@media(max-width:900px){
+  #pour .stage{grid-template-columns:1fr;grid-template-rows:auto 1fr;gap:0;padding-top:96px}
+  .steps{height:30vh}
+  .step h3{margin-bottom:12px}
+  #cup{width:min(80vw,44vh)}
+  .gauge{bottom:22px}
+  .sticker{top:auto;bottom:64px;right:20px}
+}
+
+/* ---------- CAKES ---------- */
+#cakes{height:520vh}
+#cakes .stage{--bg:#ee8b45;--fg:#17110d;background:var(--bg);color:var(--fg);transition:background .8s var(--ease),color .5s}
+.ghostName{position:absolute;left:50%;bottom:-4vw;translate:-50% 0;font-size:clamp(150px,30vw,480px);white-space:nowrap;color:transparent;-webkit-text-stroke:2px currentColor;opacity:.13;pointer-events:none;line-height:.8;transition:opacity .4s}
+.ghostName.swap{opacity:0}
+.cake{position:absolute;inset:0;display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:3vw;padding:96px max(20px,calc((100vw - 1180px)/2)) 60px;pointer-events:none}
+.cake.on{pointer-events:auto}
+.cake .txt>*{opacity:0;transform:translateY(30px);transition:opacity .25s,transform .4s}
+.cake.past .txt>*{transform:translateY(-30px)}
+.cake.on .txt>*{opacity:1;transform:none;transition:opacity .6s .25s,transform .9s var(--ease) .25s}
+.cake.on .txt>*:nth-child(2){transition-delay:.31s}.cake.on .txt>*:nth-child(3){transition-delay:.37s}.cake.on .txt>*:nth-child(4){transition-delay:.43s}.cake.on .txt>*:nth-child(5){transition-delay:.49s}.cake.on .txt>*:nth-child(6){transition-delay:.55s}
+.cake .tag{font-family:var(--hand);font-size:32px;transform:rotate(-3deg);display:inline-block}
+.cake h3{font-size:clamp(56px,8.4vw,136px);margin:4px 0 20px}
+.cake p.d{font-size:clamp(16px,1.4vw,19px);max-width:470px;font-weight:500}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:22px 0 22px}
+.chips span{border:1.5px solid currentColor;border-radius:999px;padding:6px 15px;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;opacity:.9}
+.pair{font-size:14px;font-weight:500;margin-bottom:26px;display:flex;align-items:center;gap:10px}
+.pair::before{content:"";width:22px;height:1.5px;background:currentColor}
+.pair b{font-weight:700}
+.btn.inv{background:var(--fg);color:var(--bg);border-color:var(--fg)}
+.btn.inv:hover{background:transparent;color:var(--fg)}
+.cake .art{justify-self:center;width:min(100%,62vh,560px);opacity:0;transform:translateX(35%) rotate(14deg) scale(.82);transition:opacity .3s,transform .7s var(--ease)}
+.cake.past .art{transform:translateX(-35%) rotate(-14deg) scale(.82)}
+.cake.on .art{opacity:1;transform:none;transition:opacity .6s .12s,transform 1.1s var(--ease) .08s}
+.cake.on .art svg{animation:bob 5.5s ease-in-out infinite}
+@keyframes bob{50%{transform:translateY(-12px) rotate(1.2deg)}}
+.count{position:absolute;left:max(20px,calc((100vw - 1180px)/2));top:100px;font-weight:700;font-size:12px;letter-spacing:.22em;text-transform:uppercase;display:flex;align-items:center;gap:14px}
+.count i{display:block;width:80px;height:2px;background:currentColor;opacity:.2;position:relative;overflow:hidden;border-radius:2px}
+.count i::after{content:"";position:absolute;inset:0;background:currentColor;transform:scaleX(var(--p,0));transform-origin:left}
+.count i{opacity:1;background:color-mix(in srgb,currentColor 20%,transparent)}
+.dots{position:absolute;right:max(16px,calc((100vw - 1180px)/2 - 34px));top:50%;translate:0 -50%;display:flex;flex-direction:column;gap:12px}
+.dots i{width:9px;height:9px;border-radius:50%;border:1.5px solid currentColor;transition:background .3s,transform .4s var(--ease)}
+.dots i.on{background:currentColor;transform:scale(1.35)}
+@media(max-width:900px){
+  .cake{grid-template-columns:1fr;align-content:center;gap:6px;padding:116px 20px 30px}
+  .cake .art{order:-1;width:min(66vw,30vh)}
+  .cake h3{margin-bottom:10px;font-size:clamp(46px,13vw,80px)}
+  .cake p.d{font-size:15px}
+  .chips{margin:12px 0}.chips span{font-size:11px;padding:4px 11px}
+  .pair{margin-bottom:16px}
+  .count{top:92px}.dots{right:10px}
+}
+@media(max-width:900px) and (max-height:720px){.cake .chips{display:none}}
+
+/* ---------- sections ---------- */
+section.block{padding:clamp(96px,12vw,160px) 0}
+.secHead{display:flex;align-items:flex-end;justify-content:space-between;gap:30px;flex-wrap:wrap;margin-bottom:54px}
+.secHead h2{font-size:clamp(52px,7.6vw,124px)}
+
+/* menu */
+.board{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.col{background:var(--ink2);border:1px solid var(--line);border-radius:28px;padding:32px 30px 26px;position:relative;transition:transform .5s var(--ease),border-color .4s}
+.col:hover{transform:translateY(-6px);border-color:rgba(245,235,220,.28)}
+.col .ic{width:54px;height:54px;border-radius:50%;background:var(--ink3);display:grid;place-items:center;margin-bottom:22px;color:var(--orange)}
+.col .ic svg{width:28px;height:28px}
+.col h3{font-size:40px;line-height:1}
+.col .hand{color:var(--orange);font-size:25px;display:block;margin:2px 0 18px}
+.col ul{list-style:none}
+.col li{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 0;border-top:1px solid var(--line);font-weight:500;font-size:16px}
+.col li span.s{font-weight:400;color:var(--muted);font-size:14px}
+.col li em{font-style:normal;font-size:10.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--ink);background:var(--lemon);padding:4px 10px;border-radius:999px;white-space:nowrap}
+.col li em.o{background:var(--orange)}
+.menuNote{margin-top:28px;color:var(--muted);display:flex;gap:12px 14px;flex-wrap:wrap;align-items:center;font-size:15px}
+.menuNote b{color:var(--cream);font-weight:500}
+.pill{display:inline-flex;gap:8px;align-items:center;border:1px solid var(--line);border-radius:999px;padding:8px 15px;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--cream2)}
+@media(max-width:900px){.board{grid-template-columns:1fr}}
+
+/* about */
+.about{display:grid;grid-template-columns:1.2fr .8fr;gap:6vw;align-items:start}
+.about h2{font-size:clamp(46px,6.4vw,100px);margin-bottom:32px}
+.about h2 em{font-style:normal;color:var(--orange)}
+.about p{color:var(--muted);margin-bottom:16px;max-width:580px;font-size:18px}
+.about p strong{color:var(--cream);font-weight:500}
+.stats{border-top:1px solid var(--line)}
+.stat{display:flex;align-items:baseline;justify-content:space-between;gap:20px;padding:24px 0;border-bottom:1px solid var(--line)}
+.stat b{font-family:var(--display);font-weight:400;font-size:clamp(60px,7vw,108px);line-height:1}
+.stat span{text-align:right;color:var(--muted);font-size:13px;text-transform:uppercase;letter-spacing:.14em;max-width:170px}
+.stamp{display:inline-flex;align-items:center;gap:14px;margin-top:28px}
+.stamp svg{width:72px;animation:spin 18s linear infinite}
+.stamp .hand{font-size:30px;color:var(--orange);transform:rotate(-3deg)}
+@keyframes spin{to{transform:rotate(360deg)}}
+@media(max-width:900px){.about{grid-template-columns:1fr}}
+
+/* avis */
+#avis{background:var(--cream);color:var(--ink)}
+#avis .kicker{color:var(--red)}
+.gbadge{display:flex;align-items:center;gap:16px;border:1.5px solid var(--ink);border-radius:22px;padding:14px 22px;transition:background .3s,color .3s}
+.gbadge:hover{background:var(--ink);color:var(--cream)}
+.gbadge b{font-family:var(--display);font-size:56px;font-weight:400;line-height:1}
+.gbadge small{display:block;font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase}
+.gbadge .st{color:var(--red);font-size:18px;letter-spacing:3px}
+.quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-bottom:70px}
+.q{border:1.5px solid rgba(23,17,13,.16);border-radius:24px;padding:30px 28px;display:flex;flex-direction:column;gap:22px;background:#fbf4e9;transition:transform .5s var(--ease),border-color .3s}
+.q:hover{transform:translateY(-5px);border-color:var(--ink)}
+.q p{font-size:18px;line-height:1.5;font-weight:500}
+.q .st{color:var(--red);letter-spacing:3px;font-size:14px}
+.q footer{margin-top:auto;display:flex;justify-content:space-between;align-items:center;font-size:12px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;color:#7a6a58}
+.q footer b{color:var(--ink)}
+.q.hi{background:var(--ink);color:var(--cream);border-color:var(--ink)}
+.q.hi footer,.q.hi footer b{color:var(--cream2)}
+.subH{display:flex;align-items:baseline;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-bottom:20px}
+.subH h3{font-size:clamp(30px,3.4vw,46px)}
+.subH p{color:#7a6a58;font-size:15px}
+.tl{list-style:none;border-top:1.5px solid var(--ink)}
+.tl li{display:grid;grid-template-columns:90px 1fr auto;gap:24px;align-items:center;padding:18px 0;border-bottom:1.5px solid rgba(23,17,13,.14);transition:padding .4s var(--ease),background .3s,color .3s}
+.tl li:hover{background:var(--ink);color:var(--cream);padding-inline:20px}
+.tl .y{font-family:var(--display);font-size:clamp(34px,4vw,54px);line-height:1}
+.tl .t{font-size:clamp(18px,1.9vw,24px);font-weight:700}
+.tl .t small{display:block;font-weight:400;font-size:14px;opacity:.65}
+.tl .w{font-family:var(--hand);font-size:26px;color:var(--red);white-space:nowrap}
+.bar2{height:5px;border-radius:5px;background:rgba(23,17,13,.1);margin-top:8px;overflow:hidden}
+.bar2 i{display:block;height:100%;background:var(--red);width:0;border-radius:5px;transition:width 1.3s var(--ease)}
+.rv.in .bar2 i{width:var(--w)}
+.tl li:hover .bar2{background:rgba(245,235,220,.2)}
+#avis .btn{background:var(--ink);color:var(--cream);border-color:var(--ink)}
+#avis .btn:hover{background:var(--red);border-color:var(--red)}
+#avis .btn.ghost{background:transparent;color:var(--ink)}
+#avis .btn.ghost:hover{background:var(--ink);color:var(--cream)}
+@media(max-width:900px){.quotes{grid-template-columns:1fr}}
+@media(max-width:700px){.tl li{grid-template-columns:62px 1fr}.tl .w{grid-column:2}}
+
+/* insta */
+#insta .handle{font-family:var(--hand);font-size:clamp(32px,3.8vw,54px);color:var(--orange);transition:transform .4s var(--ease)}
+#insta .handle:hover{transform:rotate(-3deg) scale(1.03)}
+.igGrid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.ig{position:relative;aspect-ratio:1;border-radius:22px;overflow:hidden;background:var(--ink2);display:block;transition:transform .5s var(--ease)}
+.ig:hover{transform:translateY(-6px) rotate(-1deg)}
+.ig img,.ig .ph{width:100%;height:100%;object-fit:cover}
+.ig .ph{display:grid;place-items:center}
+.ig .ph svg{width:78%;transition:transform .8s var(--ease)}
+.ig:hover .ph svg{transform:scale(1.06) rotate(-3deg)}
+.ig .cap{position:absolute;inset:auto 0 0 0;padding:44px 16px 14px;background:linear-gradient(transparent,rgba(23,17,13,.85));font-size:13.5px;font-weight:500;line-height:1.35;opacity:0;transform:translateY(10px);transition:opacity .35s,transform .45s var(--ease)}
+.ig:hover .cap,.ig:focus-visible .cap{opacity:1;transform:none}
+.ig .ico{position:absolute;top:12px;right:12px;width:28px;height:28px;color:var(--cream);background:rgba(23,17,13,.35);border-radius:50%;padding:5px}
+.igFoot{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;margin-top:32px;color:var(--muted)}
+@media(max-width:900px){.igGrid{grid-template-columns:repeat(2,1fr)}}
+
+/* infos */
+#infos .grid{display:grid;grid-template-columns:1fr 1fr;gap:5vw;align-items:center}
+#infos h2{font-size:clamp(46px,6.2vw,96px);margin-bottom:26px}
+.addr{font-size:22px;font-weight:700;margin-bottom:4px}
+.tel{font-size:18px;color:var(--muted)}
+.tel a{color:var(--cream);border-bottom:2px solid var(--red)}
+.open{display:inline-flex;align-items:center;gap:10px;font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:9px 16px;border-radius:999px;border:1px solid var(--line);margin:20px 0 18px}
+.open i{width:8px;height:8px;border-radius:50%;background:var(--muted)}
+.open.yes i{background:#3ddc84;box-shadow:0 0 0 0 rgba(61,220,132,.6);animation:pulse 1.8s infinite}
+.open.no i{background:var(--red)}
+@keyframes pulse{to{box-shadow:0 0 0 12px rgba(61,220,132,0)}}
+.hours{list-style:none;max-width:420px;margin-bottom:28px}
+.hours li{display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px solid var(--line);color:var(--muted);font-size:16px}
+.hours li.today{color:var(--cream);font-weight:700}
+.hours li.today span:first-child::after{content:"aujourd'hui";font-family:var(--hand);font-weight:400;color:var(--orange);font-size:21px;margin-left:10px}
+.services{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:28px}
+.map{background:var(--cream);border-radius:30px;padding:clamp(10px,1.6vw,16px);transform:rotate(2deg);transition:transform .6s var(--ease);box-shadow:0 40px 80px rgba(0,0,0,.4)}
+.map:hover{transform:rotate(0) scale(1.015)}
+.map iframe{width:100%;aspect-ratio:4/3.5;border:0;border-radius:20px;display:block;filter:sepia(.25) saturate(1.1)}
+@media(max-width:900px){#infos .grid{grid-template-columns:1fr}}
+
+/* emporter */
+#emporter{background:var(--mint);color:var(--ink);text-align:center;overflow:hidden}
+#emporter .kicker{color:var(--red)}
+#emporter h2{font-size:clamp(52px,8.6vw,144px);margin-bottom:24px}
+#emporter p{max-width:620px;margin:0 auto 12px;font-size:18px;font-weight:500}
+#emporter .row{justify-content:center;margin-top:30px}
+#emporter .btn{background:var(--ink);color:var(--cream);border-color:var(--ink)}
+#emporter .btn:hover{background:var(--red);border-color:var(--red)}
+#emporter .btn.ghost{background:transparent;color:var(--ink)}
+#emporter .btn.ghost:hover{background:var(--ink);color:var(--cream)}
+#emporter .star{position:absolute;width:110px;opacity:.5;animation:spin 18s linear infinite}
+
+/* footer */
+footer.site{padding:76px 0 28px;border-top:1px solid var(--line);overflow:hidden}
+.fgrid{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:40px;margin-bottom:56px}
+footer.site h4{font-size:11.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);margin-bottom:16px;font-weight:500}
+footer.site li{list-style:none;margin-bottom:8px}
+footer.site li a{opacity:.85;transition:color .3s,opacity .3s}
+footer.site li a:hover,.legal a:hover{color:var(--orange);opacity:1}
+.insta{font-family:var(--hand);font-size:clamp(30px,3.4vw,46px);line-height:1.1;display:inline-block;transition:transform .4s var(--ease),color .3s}
+.insta:hover{transform:rotate(-2deg);color:var(--orange)}
+.giant{font-size:clamp(70px,16.5vw,272px);text-align:center;line-height:.8;color:transparent;-webkit-text-stroke:1.5px rgba(245,235,220,.28);margin-bottom:26px;user-select:none;white-space:nowrap;transition:color .8s}
+.giant:hover{color:rgba(245,235,220,.06)}
+.legal{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:13px;color:var(--muted)}
+@media(max-width:760px){.fgrid{grid-template-columns:1fr}}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(36px);transition:opacity .9s var(--ease),transform 1.1s var(--ease)}
+.rv.in{opacity:1;transform:none}
+.rv.d1{transition-delay:.08s}.rv.d2{transition-delay:.16s}.rv.d3{transition-delay:.24s}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important;transition-duration:.01ms!important}
+  .rv{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+
+<div class="ticker" aria-label="Coffee shop américain à Châlons — cafés de spécialité et desserts faits maison"><div aria-hidden="true" id="tk"></div></div>
+
+<div id="nav"><div class="bar">
+  <a class="logo" href="#top" aria-label="DS Coffee-n-Cake, accueil"><b>DS</b><i>Coffee-n-Cake</i></a>
+  <ul id="menu">
+    <li><a href="#cakes">Nos cakes</a></li>
+    <li><a href="#carte">La carte</a></li>
+    <li><a href="#avis">Avis</a></li>
+    <li><a href="#insta">Instagram</a></li>
+    <li><a href="#infos">Infos & horaires</a></li>
+  </ul>
+  <a class="btn sm" href="tel:+33326645628">Appeler <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+  <button class="burger" id="burger" aria-label="Menu" aria-expanded="false"></button>
+</div></div>
+
+<main id="top">
+
+<!-- ================= HERO ================= -->
+<section class="pin" id="hero">
+  <div class="stage">
+    <div class="glow" id="glow"></div>
+    <canvas id="beansBack"></canvas>
+    <div class="heroText">
+      <p class="eyebrow" id="eyebrow">American coffee shop · Châlons</p>
+      <h1 class="title display" aria-label="Coffee-n-Cake"><span class="l1" id="l1">Coffee</span><span class="l2" id="l2"><i class="amp">n'</i>Cake</span></h1>
+      <div class="heroTag" id="heroTag">
+        <p>Cafés de spécialité et cakes américains faits maison, au 15 rue Thiers. On s'installe, ou on emporte.</p>
+        <div class="row"><a class="btn" href="#cakes">Voir les cakes <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a><a class="btn ghost" href="#infos">Nous trouver</a></div>
+      </div>
+    </div>
+    <svg class="heroCup" id="heroCup" viewBox="0 0 300 380" aria-label="Gobelet DS Coffee-n-Cake">
+      <defs>
+        <linearGradient id="hcB" x1="0" x2="1"><stop offset="0" stop-color="#fffaf1"/><stop offset=".55" stop-color="#f2e7d4"/><stop offset="1" stop-color="#d6c6ad"/></linearGradient>
+        <linearGradient id="hcS" x1="0" x2="1"><stop offset="0" stop-color="#f6a463"/><stop offset=".6" stop-color="#ec8a45"/><stop offset="1" stop-color="#c76a2c"/></linearGradient>
+        <linearGradient id="hcL" x1="0" x2="1"><stop offset="0" stop-color="#e5544a"/><stop offset=".6" stop-color="#d23a2f"/><stop offset="1" stop-color="#a62b22"/></linearGradient>
+      </defs>
+      <path d="M58 78 H242 L222 352 Q220 368 204 368 H96 Q80 368 78 352 Z" fill="url(#hcB)"/>
+      <path d="M64 160 H236 L227.3 282 H72.7 Z" fill="url(#hcS)"/>
+      <path d="M64 160 H236 L235.4 168 H64.6 Z M72.2 274 H227.8 L227.3 282 H72.7 Z" fill="#d23a2f"/>
+      <text x="150" y="238" text-anchor="middle" font-family="Anton,Impact,sans-serif" font-size="60" fill="#17110d">DS</text>
+      <text x="150" y="263" text-anchor="middle" font-family="Yellowtail,cursive" font-size="23" fill="#17110d">Coffee-n-Cake</text>
+      <path d="M76 96 L86 96 L100 344 L92 344 Z" fill="#fff" opacity=".35"/>
+      <rect x="44" y="58" width="212" height="30" rx="12" fill="url(#hcL)"/>
+      <rect x="66" y="38" width="168" height="26" rx="11" fill="#b52d25"/>
+      <ellipse cx="190" cy="49" rx="15" ry="4.5" fill="#7c1f18"/>
+      <text x="150" y="330" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="12" font-weight="700" letter-spacing="3" fill="#9a8770">CHÂLONS · FR</text>
+    </svg>
+    <canvas id="beansFront"></canvas>
+    <div class="hero2" id="hero2">
+      <div class="hand">recettes US, faites maison</div>
+      <h2 class="display">Carrot, pumpkin<br><em>&amp; lemon</em> cake</h2>
+    </div>
+    <div class="scrollHint" id="hint">Scroll<i></i></div>
+  </div>
+</section>
+
+<!-- ================= VERSE ================= -->
+<section class="pin" id="pour">
+  <div class="stage">
+    <div class="steps">
+      <div class="step on">
+        <span class="n">01 — le café</span>
+        <h3 class="display">Café de spécialité</h3>
+        <p>Espresso, latte, cappuccino : des cafés soignés, servis comme dans un vrai coffee shop nord-américain.</p>
+      </div>
+      <div class="step">
+        <span class="n">02 — le cake</span>
+        <h3 class="display">Fait maison, ici</h3>
+        <p>Carrot cake, cheesecake, pumpkin, lemon cake… des recettes américaines préparées sur place.</p>
+      </div>
+      <div class="step">
+        <span class="n">03 — le moment</span>
+        <h3 class="display">On se pose</h3>
+        <p>Sur place dans une ambiance cosy, ou à emporter pour le goûter. 15 rue Thiers, en plein centre.</p>
+      </div>
+    </div>
+    <div class="cupWrap">
+      <svg id="cup" viewBox="0 0 400 470" aria-hidden="true">
+        <defs>
+          <clipPath id="inside"><path d="M92 172 H308 L286 384 Q284 404 262 404 H138 Q116 404 114 384 Z"/></clipPath>
+          <linearGradient id="liq" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#ecd9b8"/><stop offset=".09" stop-color="#e2c7a0"/><stop offset=".14" stop-color="#c79563"/><stop offset=".45" stop-color="#8a5532"/><stop offset=".7" stop-color="#4a2918"/><stop offset="1" stop-color="#22120a"/>
+          </linearGradient>
+          <linearGradient id="st" gradientUnits="userSpaceOnUse" x1="0" x2="0" y1="-1400" y2="-1260"><stop offset="0" stop-color="#4a2918" stop-opacity="0"/><stop offset="1" stop-color="#3b2014"/></linearGradient>
+          <linearGradient id="gl" x1="0" x2="1"><stop offset="0" stop-color="#fff" stop-opacity=".16"/><stop offset=".3" stop-color="#fff" stop-opacity=".04"/><stop offset=".8" stop-color="#fff" stop-opacity=".02"/><stop offset="1" stop-color="#fff" stop-opacity=".12"/></linearGradient>
+          <radialGradient id="sau" cx=".5" cy=".4" r=".6"><stop offset="0" stop-color="#fbf3e6"/><stop offset="1" stop-color="#d9c8ad"/></radialGradient>
+          <filter id="blur8"><feGaussianBlur stdDeviation="8"/></filter>
+        </defs>
+        <g class="steam" id="steam" opacity="0">
+          <path d="M160 140 q-20 -28 0 -54 t0 -54"/><path d="M200 132 q20 -32 0 -60 t0 -58"/><path d="M240 140 q-20 -28 0 -54 t0 -54"/>
+        </g>
+        <rect id="stream" x="192" y="-1400" width="16" height="0" rx="8" fill="url(#st)"/>
+        <ellipse cx="200" cy="432" rx="150" ry="18" fill="rgba(0,0,0,.55)" filter="url(#blur8)"/>
+        <ellipse cx="200" cy="414" rx="160" ry="22" fill="url(#sau)"/>
+        <ellipse cx="200" cy="410" rx="110" ry="12" fill="none" stroke="rgba(23,17,13,.12)" stroke-width="5"/>
+        <path d="M304 212 q74 -6 70 64 q-4 66 -88 64" fill="none" stroke="rgba(245,235,220,.75)" stroke-width="16" stroke-linecap="round"/>
+        <path d="M304 212 q74 -6 70 64 q-4 66 -88 64" fill="none" stroke="rgba(255,255,255,.25)" stroke-width="4" stroke-linecap="round" transform="translate(-3,-3)"/>
+        <path d="M92 172 H308 L286 384 Q284 404 262 404 H138 Q116 404 114 384 Z" fill="rgba(245,235,220,.06)"/>
+        <g clip-path="url(#inside)">
+          <g id="liquid" transform="translate(0,400)">
+            <path id="wave" fill="#f3e4c9" d="M-200 2 q25 -12 50 0 t50 0 t50 0 t50 0 t50 0 t50 0 t50 0 t50 0 t50 0 t50 0 t50 0 t50 0 V30 H-200Z"/>
+            <rect x="60" y="8" width="280" height="240" fill="url(#liq)"/>
+          </g>
+        </g>
+        <path d="M92 172 H308 L286 384 Q284 404 262 404 H138 Q116 404 114 384 Z" fill="url(#gl)"/>
+        <path d="M108 186 L126 380" stroke="#fff" stroke-opacity=".28" stroke-width="6" stroke-linecap="round"/>
+        <path d="M92 172 H308 L286 384 Q284 404 262 404 H138 Q116 404 114 384 Z" fill="none" stroke="rgba(245,235,220,.85)" stroke-width="3.5" stroke-linejoin="round"/>
+        <ellipse cx="200" cy="172" rx="108" ry="5" fill="none" stroke="rgba(245,235,220,.5)" stroke-width="2"/>
+        <g id="badge" opacity="0">
+          <circle cx="200" cy="300" r="34" fill="#d23a2f"/>
+          <circle cx="200" cy="300" r="28" fill="none" stroke="#f5ebdc" stroke-width="1.5" stroke-dasharray="3 4"/>
+          <text x="200" y="312" text-anchor="middle" font-family="Anton,Impact,sans-serif" font-size="30" fill="#f5ebdc">DS</text>
+        </g>
+      </svg>
+      <div class="sticker" id="soul">Nouvelle équipe,<br>même recette ✳</div>
+    </div>
+    <div class="gauge" id="gauge"><i></i><i></i><i></i></div>
+  </div>
+</section>
+
+<!-- ================= CAKES ================= -->
+<section class="pin" id="cakes">
+  <div class="stage" id="cakeStage">
+    <div class="ghostName display" id="ghost" aria-hidden="true">Carrot</div>
+    <div class="count" id="count"><span id="countN">01 / 06</span><i id="countBar"></i></div>
+
+    <article class="cake on" data-bg="#ee8b45" data-fg="#17110d" data-name="Carrot" data-art="carrot">
+      <div class="txt">
+        <span class="tag">Le chouchou des avis</span>
+        <h3 class="display">Carrot cake</h3>
+        <p class="d">Le classique américain : un cake moelleux aux carottes et aux épices, sous un glaçage onctueux au cream cheese. Le dessert qu'on nous réclame le plus.</p>
+        <div class="chips"><span>Carottes</span><span>Cannelle</span><span>Noix</span><span>Cream cheese</span></div>
+        <p class="pair">Parfait avec un <b>latte</b></p>
+        <div class="row"><a class="btn inv" href="#infos">Venir le goûter</a></div>
+      </div>
+      <div class="art"></div>
+    </article>
+
+    <article class="cake" data-bg="#f2c4bc" data-fg="#17110d" data-name="Cheese" data-art="cheese">
+      <div class="txt">
+        <span class="tag">New York style</span>
+        <h3 class="display">Cheesecake</h3>
+        <p class="d">Une base biscuitée croustillante, un appareil crémeux et dense, un nappage fruits rouges. Simple, généreux, irrésistible.</p>
+        <div class="chips"><span>Biscuit</span><span>Fromage frais</span><span>Fruits rouges</span></div>
+        <p class="pair">Parfait avec un <b>americano</b></p>
+        <div class="row"><a class="btn inv" href="#infos">Venir le goûter</a></div>
+      </div>
+      <div class="art"></div>
+    </article>
+
+    <article class="cake" data-bg="#8c3b1f" data-fg="#f5ebdc" data-name="Pumpkin" data-art="pumpkin">
+      <div class="txt">
+        <span class="tag">Saison d'automne</span>
+        <h3 class="display">Pumpkin cake</h3>
+        <p class="d">Potiron, épices douces et chantilly : le goût de l'automne façon Amérique du Nord.</p>
+        <div class="chips"><span>Potiron</span><span>Épices</span><span>Chantilly</span></div>
+        <p class="pair">Parfait avec un <b>chocolat chaud</b></p>
+        <div class="row"><a class="btn inv" href="#infos">Venir le goûter</a></div>
+      </div>
+      <div class="art"></div>
+    </article>
+
+    <article class="cake" data-bg="#f3d45f" data-fg="#17110d" data-name="Lemon" data-art="lemon">
+      <div class="txt">
+        <span class="tag">Frais &amp; acidulé</span>
+        <h3 class="display">Lemon cake</h3>
+        <p class="d">Un cake au citron tout en fraîcheur, nappé d'un glaçage fondant. Léger, lumineux, idéal à l'heure du goûter.</p>
+        <div class="chips"><span>Citron</span><span>Zestes</span><span>Glaçage</span></div>
+        <p class="pair">Parfait avec un <b>thé</b></p>
+        <div class="row"><a class="btn inv" href="#infos">Venir le goûter</a></div>
+      </div>
+      <div class="art"></div>
+    </article>
+
+    <article class="cake" data-bg="#3b2318" data-fg="#f5ebdc" data-name="Choco" data-art="choc">
+      <div class="txt">
+        <span class="tag">Pour les gourmands</span>
+        <h3 class="display">Chocolate cake</h3>
+        <p class="d">Des couches de cake au chocolat et de crème chocolatée, une ganache qui coule. À partager… ou pas.</p>
+        <div class="chips"><span>Chocolat</span><span>Ganache</span><span>Framboise</span></div>
+        <p class="pair">Parfait avec un <b>milkshake</b></p>
+        <div class="row"><a class="btn inv" href="#infos">Venir le goûter</a></div>
+      </div>
+      <div class="art"></div>
+    </article>
+
+    <article class="cake" data-bg="#a9dccb" data-fg="#17110d" data-name="Scones" data-art="scone">
+      <div class="txt">
+        <span class="tag">Tous les samedis</span>
+        <h3 class="display">Le jour des scones</h3>
+        <p class="d">Le samedi, c'est scones ! Tout juste sortis du four, avec confiture et crème. Un rendez-vous à ne pas manquer.</p>
+        <div class="chips"><span>Samedi</span><span>Confiture</span><span>Crème</span></div>
+        <p class="pair">Parfait avec un <b>cappuccino</b></p>
+        <div class="row"><a class="btn inv" href="https://www.instagram.com/dscoffeencake/" target="_blank" rel="noopener">Suivre sur Instagram</a></div>
+      </div>
+      <div class="art"></div>
+    </article>
+
+    <div class="dots" id="dots"><i class="on"></i><i></i><i></i><i></i><i></i><i></i></div>
+  </div>
+</section>
+
+<!-- ================= LA CARTE ================= -->
+<section class="block" id="carte">
+  <div class="wrap">
+    <div class="secHead">
+      <div><span class="kicker rv">tout entre 1 et 10 €</span><h2 class="display rv d1">La carte</h2></div>
+    </div>
+    <div class="board">
+      <div class="col rv">
+        <div class="ic"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h18v8a7 7 0 0 1-7 7h-4a7 7 0 0 1-7-7z"/><path d="M23 14h2a3 3 0 0 1 0 6h-2"/><path d="M11 3c-1 2 1 3 0 5M16 3c-1 2 1 3 0 5"/></svg></div>
+        <h3 class="display">Cafés</h3>
+        <span class="hand">de spécialité</span>
+        <ul>
+          <li>Espresso</li>
+          <li>Americano</li>
+          <li>Cappuccino</li>
+          <li>Latte <em>top avis</em></li>
+          <li>Mocha</li>
+          <li>Thés &amp; infusions</li>
+        </ul>
+      </div>
+      <div class="col rv d1">
+        <div class="ic"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 10h16l-2 18H10z"/><path d="M7 10c0-3 4-5 9-5s9 2 9 5"/><path d="M19 5l3-3"/></svg></div>
+        <h3 class="display">Gourmand</h3>
+        <span class="hand">chaud ou glacé</span>
+        <ul>
+          <li>Chocolat chaud <em>top avis</em></li>
+          <li>Milkshakes <em>top avis</em></li>
+          <li>Boissons fraîches</li>
+          <li>Formule goûter</li>
+          <li><span class="s">+ boissons de saison au tableau</span></li>
+        </ul>
+      </div>
+      <div class="col rv d2">
+        <div class="ic"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 18L24 10l4 4v12H4z"/><path d="M4 18h24M4 22h24"/><circle cx="20" cy="7" r="2"/></svg></div>
+        <h3 class="display">Cakes</h3>
+        <span class="hand">faits maison</span>
+        <ul>
+          <li>Carrot cake <em class="o">n°1</em></li>
+          <li>Cheesecake</li>
+          <li>Pumpkin cake</li>
+          <li>Lemon cake</li>
+          <li>Chocolate cake</li>
+          <li>Scones <em>samedi</em></li>
+        </ul>
+      </div>
+    </div>
+    <div class="menuNote rv">
+      <span class="pill">☕ Sur place</span><span class="pill">🥡 À emporter</span><span class="pill">♿ Accessible</span>
+      <span>Les cakes changent selon les jours : <b>le menu du jour est en story Instagram.</b></span>
+    </div>
+  </div>
+</section>
+
+<!-- ================= À PROPOS ================= -->
+<section class="block" id="apropos" style="padding-top:0">
+  <div class="wrap about">
+    <div>
+      <span class="kicker rv">la maison</span>
+      <h2 class="display rv d1">Un bout d'Amérique <em>rue Thiers</em></h2>
+      <p class="rv d1"><strong>DS Coffee-n-Cake, c'est le coffee shop américain de Châlons-en-Champagne.</strong></p>
+      <p class="rv d2">Des cafés de spécialité, des desserts faits maison selon les recettes d'outre-Atlantique, et une ambiance détendue où l'on vient seul, à deux ou entre amis.</p>
+      <p class="rv d2">Depuis l'été 2026, une nouvelle équipe tient la maison avec une promesse simple : garder les recettes que vous aimez, et vous accueillir comme toujours.</p>
+      <div class="stamp rv d3">
+        <svg viewBox="0 0 100 100" aria-hidden="true"><defs><path id="circ" d="M50 50 m-37 0 a37 37 0 1 1 74 0 a37 37 0 1 1 -74 0"/></defs><circle cx="50" cy="50" r="48" fill="#d23a2f"/><text font-family="DM Sans,sans-serif" font-size="10" font-weight="700" letter-spacing="2.4" fill="#f5ebdc"><textPath href="#circ">HOMEMADE · SINCE DAY ONE · </textPath></text><text x="50" y="59" text-anchor="middle" font-family="Anton,Impact" font-size="25" fill="#f5ebdc">DS</text></svg>
+        <span class="hand">New crew — same recipes</span>
+      </div>
+    </div>
+    <div class="stats">
+      <div class="stat rv"><b data-count="4.9" data-dec="1">4,9</b><span>note moyenne sur Google</span></div>
+      <div class="stat rv d1"><b data-count="278">278</b><span>avis Google</span></div>
+      <div class="stat rv d2"><b>1–10 €</b><span>toute la carte</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= AVIS ================= -->
+<section class="block" id="avis">
+  <div class="wrap">
+    <div class="secHead">
+      <div><span class="kicker rv">vos mots, pas les nôtres</span><h2 class="display rv d1">Ce que vous<br>en dites</h2></div>
+      <a class="gbadge rv d2" href="https://www.google.com/maps/search/?api=1&query=DS+Coffee+15+rue+Thiers+Ch%C3%A2lons-en-Champagne" target="_blank" rel="noopener">
+        <b>4,9</b><span><span class="st">★★★★★</span><small>278 avis Google</small></span>
+      </a>
+    </div>
+    <div class="quotes">
+      <article class="q rv"><span class="st">★★★★★</span><p>« Un vrai bonheur ! Je venais au DS Coffee à son ouverture et j'ai eu le plaisir de redécouvrir hier après de nombreuses années. C'est toujours un moment merveilleux. »</p><footer><b>Lucile S.</b><span>Google</span></footer></article>
+      <article class="q hi rv d1"><span class="st">★★★★★</span><p>« Un véritable café comme on les trouve en Amérique du Nord, avec les recettes US de pumpkin, carrot, lemon cake et de très bons cafés de spécialité. »</p><footer><b>Avis Google</b><span>Google</span></footer></article>
+      <article class="q rv d2"><span class="st">★★★★★</span><p>« J'y suis allée deux fois et c'est toujours aussi bien, seule ou accompagnée. »</p><footer><b>Inès L.</b><span>Google</span></footer></article>
+    </div>
+    <div class="subH rv"><h3 class="display">Les plus cités</h3><p>Mots les plus fréquents dans les avis publiés en ligne</p></div>
+    <ul class="tl">
+      <li class="rv"><span class="y">#1</span><span class="t">Les desserts<small>Le premier mot cité, de loin</small><div class="bar2"><i style="--w:100%"></i></div></span><span class="w">28 mentions</span></li>
+      <li class="rv"><span class="y">#2</span><span class="t">Le latte<small>La boisson star de la maison</small><div class="bar2"><i style="--w:64%"></i></div></span><span class="w">18 mentions</span></li>
+      <li class="rv"><span class="y">#3</span><span class="t">Le carrot cake<small>Ex æquo avec les milkshakes</small><div class="bar2"><i style="--w:46%"></i></div></span><span class="w">13 mentions</span></li>
+      <li class="rv"><span class="y">#5</span><span class="t">Le cheesecake &amp; le chocolat chaud<small>Ex æquo</small><div class="bar2"><i style="--w:43%"></i></div></span><span class="w">12 mentions</span></li>
+    </ul>
+    <div class="row rv" style="margin-top:40px">
+      <a class="btn" href="https://www.google.com/maps/search/?api=1&query=DS+Coffee+15+rue+Thiers+Ch%C3%A2lons-en-Champagne" target="_blank" rel="noopener">Lire les avis Google</a>
+      <a class="btn ghost" href="https://www.google.com/maps/search/?api=1&query=DS+Coffee+15+rue+Thiers+Ch%C3%A2lons-en-Champagne" target="_blank" rel="noopener">Laisser un avis</a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= INSTAGRAM ================= -->
+<section class="block" id="insta">
+  <div class="wrap">
+    <div class="secHead">
+      <div><span class="kicker rv">le cake du jour sort d'abord ici</span><h2 class="display rv d1">Sur Insta</h2></div>
+      <a class="handle rv d2" href="https://www.instagram.com/dscoffeencake/" target="_blank" rel="noopener">@dscoffeencake</a>
+    </div>
+    <div class="igGrid" id="igGrid" aria-live="polite"></div>
+    <div class="igFoot rv">
+      <span>Le cake du jour, les nouveautés, les scones du samedi : tout passe d'abord par Instagram.</span>
+      <a class="btn" href="https://www.instagram.com/dscoffeencake/" target="_blank" rel="noopener">Nous suivre</a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= INFOS ================= -->
+<section class="block" id="infos" style="padding-top:0">
+  <div class="wrap grid">
+    <div>
+      <span class="kicker rv">on vous attend</span>
+      <h2 class="display rv d1">Coffee shop<br>/ Salon de thé</h2>
+      <p class="addr rv d1">15 rue Thiers, 51000 Châlons-en-Champagne</p>
+      <p class="tel rv d1">Téléphone : <a href="tel:+33326645628">03 26 64 56 28</a></p>
+      <div class="open rv d1" id="open"><i></i><span>Horaires</span></div>
+      <ul class="hours rv d2" id="hours"></ul>
+      <div class="services rv d2"><span class="pill">Sur place</span><span class="pill">À emporter</span><span class="pill">Accessible PMR</span></div>
+      <div class="row rv d3">
+        <a class="btn" href="https://www.google.com/maps/dir/?api=1&destination=15+rue+Thiers+51000+Ch%C3%A2lons-en-Champagne" target="_blank" rel="noopener">Itinéraire</a>
+        <a class="btn ghost" href="tel:+33326645628">Appeler</a>
+      </div>
+    </div>
+    <div class="map rv d1">
+      <iframe title="Plan d'accès DS Coffee-n-Cake, 15 rue Thiers à Châlons-en-Champagne" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=15+rue+Thiers+51000+Ch%C3%A2lons-en-Champagne&z=17&output=embed"></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- ================= À EMPORTER ================= -->
+<section class="block" id="emporter">
+  <svg class="star" viewBox="0 0 100 100" style="left:6%;top:14%" aria-hidden="true"><g stroke="#17110d" stroke-width="6" stroke-linecap="round"><path d="M50 10v80M15 30l70 40M15 70l70-40"/></g></svg>
+  <svg class="star" viewBox="0 0 100 100" style="right:7%;bottom:12%;animation-direction:reverse" aria-hidden="true"><g stroke="#17110d" stroke-width="6" stroke-linecap="round"><path d="M50 10v80M15 30l70 40M15 70l70-40"/></g></svg>
+  <div class="wrap">
+    <span class="kicker rv">anniversaire, bureau, goûter</span>
+    <h2 class="display rv d1">Une envie<br>de goûter ?</h2>
+    <p class="rv d2">Un cake entier pour un anniversaire, une boîte de douceurs pour le bureau, ou juste votre latte à emporter en passant.</p>
+    <p class="rv d2">Appelez-nous, on vous le prépare.</p>
+    <div class="row rv d3">
+      <a class="btn" href="tel:+33326645628">03 26 64 56 28</a>
+      <a class="btn ghost" href="https://www.instagram.com/dscoffeencake/" target="_blank" rel="noopener">Écrire sur Instagram</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="fgrid">
+      <div>
+        <h4>Suivez-nous</h4>
+        <a class="insta" href="https://www.instagram.com/dscoffeencake/" target="_blank" rel="noopener">@dscoffeencake</a>
+        <ul style="margin-top:14px"><li><a href="https://www.facebook.com/dscoffeencake/" target="_blank" rel="noopener">Facebook</a></li></ul>
+      </div>
+      <div>
+        <h4>Menu</h4>
+        <ul><li><a href="#cakes">Nos cakes</a></li><li><a href="#carte">La carte</a></li><li><a href="#avis">Avis</a></li><li><a href="#infos">Infos & horaires</a></li></ul>
+      </div>
+      <div>
+        <h4>Coffee shop</h4>
+        <ul><li>15 rue Thiers</li><li>51000 Châlons-en-Champagne</li><li><a href="tel:+33326645628">03 26 64 56 28</a></li></ul>
+      </div>
+    </div>
+  </div>
+  <div class="giant display" aria-hidden="true">Coffee-n-Cake</div>
+  <div class="wrap legal">
+    <span>© <span id="yr">2026</span> DS Coffee-n-Cake</span>
+    <span><a href="#">Mentions légales</a> · <a href="#">Confidentialité</a></span>
+  </div>
+</footer>
+
+<script>
+/* =====================================================================
+   CONFIG — à compléter / vérifier avec le gérant
+   ===================================================================== */
+var CONFIG = {
+  /* Flux Instagram : compte gratuit sur behold.so → connecter @dscoffeencake →
+     créer un feed "JSON" → coller son ID ici. Vide = tuiles illustrées vers le profil. */
+  BEHOLD_FEED_ID: "",
+  IG_URL: "https://www.instagram.com/dscoffeencake/",
+  IG_COUNT: 8,
+  /* Horaires — PROVISOIRES, À VÉRIFIER. Minutes depuis minuit, null = fermé. 0 = dimanche … 6 = samedi */
+  HOURS: {1:null, 2:[570,1110], 3:[570,1110], 4:[570,1110], 5:[570,1110], 6:[570,1110], 0:null}
+};
+</script>
+
+<script>
+(function(){
+"use strict";
+var reduce=matchMedia("(prefers-reduced-motion:reduce)").matches;
+var $=function(s,c){return (c||document).querySelector(s)}, $$=function(s,c){return [].slice.call((c||document).querySelectorAll(s))};
+var clamp=function(v,a,b){return Math.max(a,Math.min(b,v))};
+var seg=function(p,a,b){return clamp((p-a)/(b-a),0,1)};
+var easeOut=function(t){return 1-Math.pow(1-t,3)};
+var easeIO=function(t){return t<.5?4*t*t*t:1-Math.pow(-2*t+2,3)/2};
+var lerp=function(a,b,t){return a+(b-a)*t};
+var isMob=function(){return innerWidth<=900};
+
+/* ---- ticker ---- */
+var tItems=["Coffee shop américain · Châlons","Cafés de spécialité","Desserts faits maison","Le samedi, c'est scones !","4,9 ★ sur Google","Sur place ou à emporter"], th="";
+for(var r=0;r<4;r++) tItems.forEach(function(s){th+="<span>"+s+"</span>"}); $("#tk").innerHTML=th;
+
+/* ---- nav ---- */
+var nav=$("#nav"), burger=$("#burger"), menu=$("#menu");
+burger.addEventListener("click",function(){var o=menu.classList.toggle("open");burger.classList.toggle("x",o);burger.setAttribute("aria-expanded",o)});
+$$("a",menu).forEach(function(a){a.addEventListener("click",function(){menu.classList.remove("open");burger.classList.remove("x");burger.setAttribute("aria-expanded",false)})});
+$("#yr").textContent=new Date().getFullYear();
+
+function prog(el){var r=el.getBoundingClientRect(), d=r.height-innerHeight; return d>0?clamp(-r.top/d,0,1):0}
+function near(el){var r=el.getBoundingClientRect(); return r.bottom>-200 && r.top<innerHeight+200}
+
+/* ================= illustrations (parts de cake) ================= */
+var uid=0;
+var CK={
+  carrot:{l:[["#c8783a",.4],["#f8f0e2",.1],["#c8783a",.4],["#f8f0e2",.1]],crust:"#93522a",top:"#fbf5ea",drip:"#fbf5ea",crumb:"#8a4a1c"},
+  cheese:{l:[["#f6e4b8",.8],["#a8703c",.2]],crust:"#dcc088",top:"#b81f37",drip:null,crumb:null},
+  pumpkin:{l:[["#df8a3d",.84],["#a8743f",.16]],crust:"#b0612a",top:"#e39a55",drip:null,crumb:"#7a3c14"},
+  lemon:{l:[["#fff7dc",.08],["#f1d773",.42],["#fff7dc",.08],["#f1d773",.42]],crust:"#cfa944",top:"#fff8df",drip:"#fff8df",crumb:null},
+  choc:{l:[["#5c3221",.17],["#2a150c",.33],["#5c3221",.17],["#2a150c",.33]],crust:"#3a1f13",top:"#2f170d",drip:"#2f170d",crumb:"#170a04"},
+  scone:{l:[["#e6b977",.44],["#fbf3e4",.1],["#b8233a",.08],["#e6b977",.38]],crust:"#c48d4b",top:"#d9a25c",drip:null,crumb:"#a86f33"}
+};
+function L(a,b,t){return a+(b-a)*t}
+function cakeSVG(k){
+  var C=CK[k], u="c"+(++uid), s="";
+  s+='<svg viewBox="0 0 400 400" aria-hidden="true"><defs>';
+  s+='<filter id="'+u+'b" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="9"/></filter>';
+  s+='<linearGradient id="'+u+'p" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fffbf4"/><stop offset="1" stop-color="#e3d5bf"/></linearGradient>';
+  s+='<linearGradient id="'+u+'f" x1="0" x2="1"><stop offset="0" stop-color="#fff" stop-opacity=".22"/><stop offset=".45" stop-color="#fff" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".2"/></linearGradient>';
+  s+='<linearGradient id="'+u+'v" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".18"/></linearGradient>';
+  s+='</defs>';
+  /* assiette */
+  s+='<ellipse cx="205" cy="342" rx="165" ry="26" fill="rgba(0,0,0,.3)" filter="url(#'+u+'b)"/>';
+  s+='<ellipse cx="205" cy="322" rx="180" ry="42" fill="url(#'+u+'p)"/>';
+  s+='<ellipse cx="205" cy="318" rx="140" ry="28" fill="none" stroke="rgba(60,40,20,.08)" stroke-width="7"/>';
+  s+='<ellipse cx="215" cy="300" rx="148" ry="15" fill="rgba(0,0,0,.25)" filter="url(#'+u+'b)"/>';
+  /* croûte arrière */
+  s+='<path d="M290 120 L350 170 L350 290 L290 240 Z" fill="'+C.crust+'"/>';
+  s+='<path d="M290 120 L350 170 L350 290 L290 240 Z" fill="url(#'+u+'v)"/>';
+  /* couches */
+  var f=0;
+  C.l.forEach(function(Ly){var a=f,b=f+Ly[1];f=b;
+    s+='<path d="M70 '+(200+100*a)+' L350 '+(170+120*a)+' L350 '+(170+120*b)+' L70 '+(200+100*b)+' Z" fill="'+Ly[0]+'"/>';});
+  if(C.crumb){for(var i=0;i<30;i++){var x=86+((i*53)%254),fr=((i*37)%92)/100,yt=L(200,170,(x-70)/280),yb=L(300,290,(x-70)/280),y=L(yt+8,yb-6,fr);s+='<circle cx="'+x+'" cy="'+y.toFixed(1)+'" r="'+(1.6+(i%3)*.6)+'" fill="'+C.crumb+'" opacity=".55"/>'}}
+  s+='<path d="M70 200 L350 170 L350 290 L70 300 Z" fill="url(#'+u+'f)"/>';
+  /* dessus */
+  s+='<path d="M70 200 L290 120 L350 170 Z" fill="'+C.top+'"/>';
+  s+='<path d="M74 198 L290 122" stroke="#fff" stroke-opacity=".45" stroke-width="2.5" stroke-linecap="round"/>';
+  /* coulures */
+  if(C.drip){
+    var d=[4,13,6,20,8,5,16,7,22,6,10], pts=[];
+    for(var j=10;j>=0;j--){var t=j/10,px=70+280*t,py=200-30*t+10+d[j];pts.push([px,py])}
+    var p='M70 200 L350 170 L350 '+(180+d[10]);
+    pts.forEach(function(q){p+=' L'+q[0].toFixed(1)+' '+q[1].toFixed(1)});
+    s+='<path d="'+p+' Z" fill="'+C.drip+'" stroke="'+C.drip+'" stroke-width="6" stroke-linejoin="round"/>';
+    pts.forEach(function(q,ix){if(d[10-ix]>11) s+='<circle cx="'+q[0].toFixed(1)+'" cy="'+(q[1]+1).toFixed(1)+'" r="5.5" fill="'+C.drip+'"/>'});
+  }
+  /* décor */
+  if(k==="carrot"){
+    [[175,178],[235,158],[292,156]].forEach(function(q){
+      s+='<g transform="translate('+q[0]+' '+q[1]+')"><ellipse cx="0" cy="2" rx="17" ry="8" fill="rgba(0,0,0,.08)"/><circle cx="0" cy="-6" r="13" fill="#fffaf2"/><path d="M-9 -6 q9 -14 18 0" stroke="#eadfcd" stroke-width="2.5" fill="none"/>';
+      s+='<g transform="translate(0 -16) rotate(-30)"><path d="M0 0 L20 -4.5 L20 4.5 Z" fill="#ec8a45"/><path d="M7 -2 l0 4 M12 -3 l0 5" stroke="#c76a2c" stroke-width="1.2"/><path d="M20 0 l9 -6 M20 0 l10 2 M20 0 l7 6" stroke="#4f9a5c" stroke-width="2.6" stroke-linecap="round"/></g></g>';
+    });
+    [[130,190],[265,140],[318,170],[205,184]].forEach(function(q){s+='<ellipse cx="'+q[0]+'" cy="'+q[1]+'" rx="7" ry="5" fill="#9a6431"/><path d="M'+(q[0]-4)+' '+q[1]+' q4 -3 8 0" stroke="#6e4220" stroke-width="1.5" fill="none"/>'});
+  }
+  if(k==="cheese"){
+    s+='<path d="M70 200 L350 170 L350 178 L70 208 Z" fill="#8f1428"/>';
+    s+='<path d="M120 182 q60 -24 120 -44" stroke="#fff" stroke-opacity=".35" stroke-width="5" stroke-linecap="round" fill="none"/>';
+    [[205,168,"#d8263f"],[248,150,"#d8263f"],[292,156,"#3c2a5c"],[170,182,"#3c2a5c"],[318,170,"#d8263f"]].forEach(function(q){
+      s+='<circle cx="'+q[0]+'" cy="'+(q[1]-8)+'" r="'+(q[2]==="#3c2a5c"?7:11)+'" fill="'+q[2]+'"/><circle cx="'+(q[0]-3)+'" cy="'+(q[1]-12)+'" r="2.6" fill="#fff" opacity=".6"/>';
+    });
+    s+='<path d="M245 128 q10 -12 22 -6 q-8 10 -22 6Z" fill="#4f9a5c"/>';
+  }
+  if(k==="pumpkin"){
+    s+='<g transform="translate(232 150)"><ellipse cx="0" cy="8" rx="36" ry="10" fill="rgba(0,0,0,.08)"/><ellipse cx="0" cy="2" rx="32" ry="12" fill="#fffaf2"/><ellipse cx="0" cy="-8" rx="24" ry="10" fill="#fff"/><ellipse cx="2" cy="-17" rx="15" ry="8" fill="#fffaf2"/><path d="M2 -24 q6 -6 2 -12" stroke="#fff" stroke-width="6" stroke-linecap="round" fill="none"/><path d="M-20 -6 q20 6 40 -2" stroke="#ebdfcb" stroke-width="2" fill="none"/></g>';
+    for(var c=0;c<26;c++){var cx=120+((c*47)%200),lo=L(200,170,(cx-70)/280)-4,hi=cx<290?L(200,120,(cx-70)/220)+6:L(120,170,(cx-290)/60)+6,cy=L(hi,lo,((c*29)%80)/100);s+='<circle cx="'+cx+'" cy="'+cy.toFixed(1)+'" r="1.6" fill="#7a3c14" opacity=".6"/>'}
+    [[150,184],[300,160]].forEach(function(q){s+='<ellipse cx="'+q[0]+'" cy="'+q[1]+'" rx="7" ry="4" fill="#9cb86a" transform="rotate(-20 '+q[0]+' '+q[1]+')"/>'});
+  }
+  if(k==="lemon"){
+    s+='<g transform="translate(240 146) rotate(-12)"><ellipse cx="0" cy="10" rx="28" ry="9" fill="rgba(0,0,0,.08)"/><circle r="25" fill="#f3d45f"/><circle r="21" fill="#fbeaa0"/>';
+    for(var a=0;a<8;a++){var an=a*Math.PI/4;s+='<path d="M0 0 L'+(19*Math.cos(an-.3)).toFixed(1)+' '+(19*Math.sin(an-.3)).toFixed(1)+' A19 19 0 0 1 '+(19*Math.cos(an+.3)).toFixed(1)+' '+(19*Math.sin(an+.3)).toFixed(1)+' Z" fill="#f6dc6c"/>'}
+    s+='<circle r="3" fill="#fff8df"/></g>';
+    [[160,184],[190,172],[290,160],[315,170],[205,160]].forEach(function(q,i){s+='<path d="M'+q[0]+' '+q[1]+' q6 -6 12 '+(i%2?-2:2)+'" stroke="#e9bf22" stroke-width="3" stroke-linecap="round" fill="none"/>'});
+  }
+  if(k==="choc"){
+    s+='<g transform="translate(236 140)"><ellipse cx="0" cy="12" rx="18" ry="6" fill="rgba(0,0,0,.2)"/><path d="M0 -16 q-15 1 -15 13 q0 14 15 15 q15 -1 15 -15 q0 -12 -15 -13Z" fill="#c7213a"/>';
+    for(var b2=0;b2<9;b2++){s+='<circle cx="'+(-8+(b2%3)*8)+'" cy="'+(-8+Math.floor(b2/3)*8)+'" r="3.4" fill="#e03552" opacity=".85"/>'}
+    s+='<path d="M-4 -16 l4 -6 l4 6" stroke="#4f9a5c" stroke-width="2.6" fill="none" stroke-linecap="round"/></g>';
+    [[160,180,-20],[185,168,30],[290,152,10],[310,166,-40],[200,184,60]].forEach(function(q){s+='<rect x="'+q[0]+'" y="'+q[1]+'" width="16" height="5" rx="2" fill="#6b3a22" transform="rotate('+q[2]+' '+q[0]+' '+q[1]+')"/>'});
+    s+='<path d="M90 194 L280 126" stroke="#fff" stroke-opacity=".18" stroke-width="5" stroke-linecap="round"/>';
+  }
+  if(k==="scone"){
+    s+='<g transform="translate(212 162)"><ellipse cx="0" cy="6" rx="22" ry="7" fill="rgba(0,0,0,.08)"/><path d="M-20 4 q-4 -16 12 -18 q8 -10 18 0 q14 2 10 18 Z" fill="#fffaf2"/></g>';
+    s+='<g transform="translate(272 146)"><ellipse cx="0" cy="5" rx="17" ry="6" fill="rgba(0,0,0,.1)"/><path d="M-16 3 q-2 -14 16 -14 q18 0 16 14 Z" fill="#b8233a"/><circle cx="-4" cy="-6" r="2.5" fill="#fff" opacity=".5"/></g>';
+    for(var sc=0;sc<14;sc++){var sx=110+((sc*41)%200);s+='<circle cx="'+sx+'" cy="'+(L(200,170,(sx-70)/280)-6-((sc*13)%14))+'" r="1.8" fill="#b97a3c" opacity=".7"/>'}
+  }
+  s+='</svg>';
+  return s;
+}
+$$(".cake").forEach(function(el){$(".art",el).innerHTML=cakeSVG(el.dataset.art)});
+
+/* ================= HERO : grains + vermicelles ================= */
+var hero=$("#hero"), cB=$("#beansBack"), cF=$("#beansFront"), xB=cB.getContext("2d"), xF=cF.getContext("2d");
+var W=0,H=0,DPR=1, heroSm=0;
+var sprite=(function(){
+  var c=document.createElement("canvas"); c.width=120; c.height=160; var x=c.getContext("2d");
+  x.translate(60,80);
+  var g=x.createRadialGradient(-14,-24,6,0,0,78); g.addColorStop(0,"#a06a40"); g.addColorStop(.45,"#5c3519"); g.addColorStop(1,"#22110a");
+  x.fillStyle=g; x.beginPath(); x.ellipse(0,0,46,66,0,0,Math.PI*2); x.fill();
+  x.strokeStyle="#160a05"; x.lineWidth=7; x.lineCap="round"; x.beginPath(); x.moveTo(-4,-58); x.bezierCurveTo(22,-22,-24,18,4,58); x.stroke();
+  x.fillStyle="rgba(255,235,210,.14)"; x.beginPath(); x.ellipse(-20,-28,10,22,-.4,0,Math.PI*2); x.fill();
+  return c;
+})();
+var SPR=["#d23a2f","#f3d45f","#a9dccb","#f5ebdc","#ec8a45"];
+var beans=[];
+(function(){
+  var n=innerWidth<700?44:84, s=11;
+  function rnd(){s=(s*16807)%2147483647;return (s-1)/2147483646}
+  for(var i=0;i<n;i++) beans.push({a:rnd()*Math.PI*2,d:.28+rnd()*.95,z:rnd()*2-1,r:rnd()*Math.PI*2,sp:(rnd()-.5)*1.6,ph:rnd()*Math.PI*2,sz:.5+rnd()*.8,fall:.5+rnd(),spr:rnd()<.28,col:SPR[(rnd()*SPR.length)|0]});
+  beans.sort(function(a,b){return a.z-b.z});
+})();
+function size(){DPR=Math.min(devicePixelRatio||1,2); W=cB.clientWidth; H=cB.clientHeight; [cB,cF].forEach(function(c){c.width=W*DPR;c.height=H*DPR})}
+function drawBeans(t){
+  xB.setTransform(DPR,0,0,DPR,0,0); xF.setTransform(DPR,0,0,DPR,0,0);
+  xB.clearRect(0,0,W,H); xF.clearRect(0,0,W,H);
+  var p=heroSm, p1=easeOut(seg(p,0,.55)), p2=seg(p,.55,1);
+  var m=isMob(), ox=m?.5:lerp(.75,.5,easeIO(seg(p,0,.45))), oy=m?.57:.54;
+  var R=Math.max(W,H)*.62, burst=lerp(.34,1.2,p1), base=Math.min(W,H)*.072;
+  for(var i=0;i<beans.length;i++){
+    var b=beans[i], depth=1+b.z*.55, rad=R*b.d*burst*depth;
+    var fx=Math.sin(t*.0006+b.ph)*14*depth, fy=Math.cos(t*.0005+b.ph*1.3)*14*depth;
+    var x=W*ox+Math.cos(b.a+p1*.5*b.sp)*rad+fx;
+    var y=H*oy+Math.sin(b.a+p1*.5*b.sp)*rad*.78+fy+p2*p2*H*1.5*b.fall*depth;
+    if(y-90>H||x<-90||x>W+90) continue;
+    var ctx=b.z>.1?xF:xB;
+    ctx.save(); ctx.translate(x,y); ctx.rotate(b.r+t*.0004*b.sp+p*4*b.sp);
+    ctx.globalAlpha=clamp(.4+depth*.4,0,1);
+    if(b.spr){var Ln=base*.5*b.sz*depth, w=Ln*.32; ctx.fillStyle=b.col; ctx.beginPath(); if(ctx.roundRect) ctx.roundRect(-Ln/2,-w/2,Ln,w,w/2); else ctx.rect(-Ln/2,-w/2,Ln,w); ctx.fill()}
+    else{var sc=base*b.sz*depth/160*(.85+p1*.35); ctx.scale(sc,sc); ctx.drawImage(sprite,-60,-80)}
+    ctx.restore();
+  }
+}
+var l1=$("#l1"), l2=$("#l2"), eyebrow=$("#eyebrow"), cupH=$("#heroCup"), tag=$("#heroTag"), hero2=$("#hero2"), glow=$("#glow"), hint=$("#hint");
+function heroDom(){
+  var p=heroSm, a=easeIO(seg(p,0,.45)), b=easeIO(seg(p,.42,.76)), c=seg(p,.86,1), m=isMob();
+  l1.style.transform="translate3d("+(-a*110)+"vw,0,0)";
+  l2.style.transform="translate3d("+(a*110)+"vw,0,0)";
+  l1.style.opacity=l2.style.opacity=1-seg(p,.18,.42);
+  eyebrow.style.opacity=1-seg(p,0,.15);
+  tag.style.opacity=1-seg(p,0,.14); tag.style.transform="translate3d(0,"+(seg(p,0,.14)*30)+"px,0)";
+  tag.style.pointerEvents=p>.1?"none":"auto";
+  hint.style.opacity=1-seg(p,0,.06);
+  var dx=m?0:-25*a, dy=(m?-7:-4)*a-b*(m?24:22);
+  cupH.style.transform="translate3d("+dx+"vw,"+dy+"vh,0) rotate("+lerp(-7,6,a)+"deg) scale("+(lerp(1,m?1.12:1.16,a)-b*.5)+")";
+  cupH.style.opacity=1-c;
+  glow.style.transform="translate3d("+dx+"vw,"+dy+"vh,0) scale("+lerp(1,1.45,a)+")"; glow.style.opacity=1-c;
+  hero2.style.opacity=seg(p,.55,.7)*(1-c);
+  hero2.style.transform="translate3d(0,"+(lerp(50,0,easeOut(seg(p,.55,.8)))+14)+"vh,0) scale("+lerp(.92,1,seg(p,.55,.8))+")";
+}
+
+/* ================= VERSE ================= */
+var pour=$("#pour"), stream=$("#stream"), liquid=$("#liquid"), wave=$("#wave"), steam=$("#steam"), badge=$("#badge"), soul=$("#soul");
+var steps=$$(".step",pour), gauges=$$("#gauge i"), stG=$("#st");
+var EMPTY=400, FULL=198, TOP=-1400;
+function pourSize(){TOP=isMob()?-160:-1400; stG.setAttribute("y1",TOP); stG.setAttribute("y2",TOP+130)}
+pourSize(); addEventListener("resize",pourSize);
+function pourDom(t){
+  var p=prog(pour);
+  var fill=easeIO(seg(p,.1,.86)), surf=lerp(EMPTY,FULL,fill);
+  liquid.setAttribute("transform","translate(0,"+surf.toFixed(1)+")");
+  wave.setAttribute("transform","translate("+((t*.05)%100).toFixed(1)+",0)");
+  var grow=seg(p,.02,.1), end=seg(p,.86,.93);
+  var y0=lerp(TOP,surf,end), y1=lerp(TOP,surf+10,grow);
+  stream.setAttribute("y",y0.toFixed(1)); stream.setAttribute("height",Math.max(0,y1-y0).toFixed(1));
+  stream.setAttribute("x",(192+Math.sin(t*.012)*1.2).toFixed(2));
+  var done=seg(p,.9,.98);
+  steam.setAttribute("opacity",done); badge.setAttribute("opacity",done);
+  badge.setAttribute("transform","translate(200 300) scale("+lerp(.6,1,easeOut(done))+") rotate("+lerp(-30,-8,easeOut(done))+") translate(-200 -300)");
+  soul.classList.toggle("on",p>.92);
+  var idx=p<.36?0:p<.68?1:2;
+  steps.forEach(function(s,i){s.classList.toggle("on",i===idx);s.classList.toggle("past",i<idx)});
+  gauges.forEach(function(g,i){g.style.setProperty("--f",seg(p,[0,.36,.68][i],[.36,.68,1][i]))});
+}
+
+/* ================= CAKES ================= */
+var cakes=$("#cakes"), stage=$("#cakeStage"), items=$$(".cake",cakes), dots=$$("#dots i"), ghost=$("#ghost"), countN=$("#countN"), countBar=$("#countBar"), cur=-1;
+function cakesDom(){
+  var p=prog(cakes), n=items.length, i=clamp(Math.floor(p*n*.999),0,n-1);
+  ghost.style.transform="translateX("+((p*n-i-.5)*-10)+"%)";
+  countBar.style.setProperty("--p",p.toFixed(3));
+  if(i===cur) return;
+  var first=cur<0; cur=i;
+  items.forEach(function(el,k){el.classList.toggle("on",k===i); el.classList.toggle("past",k<i)});
+  dots.forEach(function(d,k){d.classList.toggle("on",k===i)});
+  stage.style.setProperty("--bg",items[i].dataset.bg); stage.style.setProperty("--fg",items[i].dataset.fg);
+  countN.textContent="0"+(i+1)+" / 0"+n;
+  if(first){ghost.textContent=items[i].dataset.name;return}
+  ghost.classList.add("swap");
+  setTimeout(function(){ghost.textContent=items[cur].dataset.name;ghost.classList.remove("swap")},280);
+}
+
+/* ---- boucle ---- */
+function frame(t){
+  nav.classList.toggle("solid",scrollY>innerHeight*.4);
+  if(near(hero)){heroSm+=(prog(hero)-heroSm)*(reduce?1:.12); drawBeans(reduce?0:t); heroDom()}
+  if(near(pour)) pourDom(reduce?0:t);
+  if(near(cakes)) cakesDom();
+  requestAnimationFrame(frame);
+}
+addEventListener("resize",size); size(); requestAnimationFrame(frame);
+
+/* ---- reveal + compteurs ---- */
+var io=new IntersectionObserver(function(es){es.forEach(function(e){
+  if(!e.isIntersecting) return; e.target.classList.add("in"); io.unobserve(e.target);
+  var b=e.target.querySelector("[data-count]"); if(b) countUp(b);
+})},{threshold:.15});
+function watch(){$$(".rv:not(.in)").forEach(function(el){io.observe(el)})}
+watch();
+function countUp(b){
+  var to=+b.dataset.count, dec=+(b.dataset.dec||0), t0=performance.now(), d=reduce?1:1300;
+  (function f(t){var k=clamp((t-t0)/d,0,1); b.textContent=(easeOut(k)*to).toFixed(dec).replace(".",","); if(k<1) requestAnimationFrame(f)})(t0);
+}
+
+/* ---- horaires + ouvert / fermé (heure de Paris) ---- */
+(function(){
+  var names=["Dimanche","Lundi","Mardi","Mercredi","Jeudi","Vendredi","Samedi"], order=[1,2,3,4,5,6,0];
+  function hm(m){return String(Math.floor(m/60)).padStart(2,"0")+"h"+String(m%60).padStart(2,"0")}
+  $("#hours").innerHTML=order.map(function(d){var h=CONFIG.HOURS[d];return '<li data-d="'+d+'"><span>'+names[d]+'</span><span>'+(h?hm(h[0])+" – "+hm(h[1]):"Fermé")+'</span></li>'}).join("");
+  try{
+    var o={}; new Intl.DateTimeFormat("en-GB",{timeZone:"Europe/Paris",weekday:"short",hour:"2-digit",minute:"2-digit",hour12:false}).formatToParts(new Date()).forEach(function(x){o[x.type]=x.value});
+    var d=["Sun","Mon","Tue","Wed","Thu","Fri","Sat"].indexOf(o.weekday), m=(+o.hour%24)*60+ +o.minute, h=CONFIG.HOURS[d];
+    var li=$('#hours li[data-d="'+d+'"]'); if(li) li.classList.add("today");
+    var open=!!h && m>=h[0] && m<h[1], el=$("#open"), txt;
+    el.classList.add(open?"yes":"no");
+    if(open) txt="Ouvert — jusqu'à "+hm(h[1]);
+    else if(h && m<h[0]) txt="Fermé — ouvre à "+hm(h[0]);
+    else {for(var k=1;k<=7;k++){var nd=(d+k)%7; if(CONFIG.HOURS[nd]){txt="Fermé — réouverture "+(k===1?"demain":names[nd].toLowerCase())+" "+hm(CONFIG.HOURS[nd][0]);break}}}
+    el.querySelector("span").textContent=txt||"Fermé";
+  }catch(e){}
+})();
+
+/* ---- INSTAGRAM ---- */
+(function(){
+  var grid=$("#igGrid");
+  var ico='<svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>';
+  function esc(s){return String(s||"").replace(/[&<>"]/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})}
+  function fallback(){
+    var F=[["carrot","#ee8b45","Carrot cake du jour, glaçage cream cheese"],["cheese","#f2c4bc","Cheesecake New York, fruits rouges"],["scone","#a9dccb","C'est le jour des scones samedi !"],["pumpkin","#8c3b1f","Pumpkin season is here"],["lemon","#f3d45f","Un lemon cake pour le goûter ?"],["choc","#3b2318","Chocolate lovers only"],["carrot","#d23a2f","Latte + carrot cake = combo parfait"],["cheese","#e9dcc6","Votre table vous attend rue Thiers"]];
+    grid.innerHTML=F.slice(0,CONFIG.IG_COUNT).map(function(f,i){
+      return '<a class="ig rv'+(i%4?" d"+(i%4):"")+'" href="'+CONFIG.IG_URL+'" target="_blank" rel="noopener" aria-label="Voir @dscoffeencake sur Instagram"><div class="ph" style="background:'+f[1]+'">'+cakeSVG(f[0])+'</div>'+ico+'<span class="cap">'+esc(f[2])+'</span></a>';
+    }).join(""); watch();
+  }
+  if(!CONFIG.BEHOLD_FEED_ID){fallback();return}
+  fetch("https://feeds.behold.so/"+CONFIG.BEHOLD_FEED_ID).then(function(r){if(!r.ok) throw 0; return r.json()}).then(function(data){
+    var posts=(data&&data.posts)||data||[]; if(!posts.length) throw 0;
+    grid.innerHTML=posts.slice(0,CONFIG.IG_COUNT).map(function(p,i){
+      var img=(p.sizes&&p.sizes.medium&&p.sizes.medium.mediaUrl)||p.thumbnailUrl||p.mediaUrl, cap=(p.prunedCaption||p.caption||"").slice(0,110);
+      return '<a class="ig rv'+(i%4?" d"+(i%4):"")+'" href="'+esc(p.permalink||CONFIG.IG_URL)+'" target="_blank" rel="noopener"><img loading="lazy" src="'+esc(img)+'" alt="'+esc(cap||"Publication Instagram DS Coffee-n-Cake")+'">'+ico+(cap?'<span class="cap">'+esc(cap)+'</span>':"")+'</a>';
+    }).join(""); watch();
+  }).catch(fallback);
+})();
+})();
+</script>
+</body>
+</html>
